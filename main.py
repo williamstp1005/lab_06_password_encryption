@@ -6,6 +6,12 @@ def encode(password):
     print(password)
     return password
 
+def decode(password):
+    decpass = ''
+    for char in password:
+        char = int(char)+3
+        decpass = decpass + str(char)
+    return decpass
 
 def main():
     option = 0
@@ -18,7 +24,8 @@ def main():
             password = encode(password)
             print("Your password has been encoded and stored!\n")
         if option == 2:
-            print("NO WRITTEN FUNCTION YET")
+            newpass = decode(password)
+            print(f'The encoded password is {password}, and the original password is {newpass}.\n')
         if option == 3:
             break
 
