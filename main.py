@@ -1,8 +1,9 @@
+# William St. Peter Lab 06 Software Engineering
 def encode(password):
     listed_password = list(password)
     encoded_password_list = [str(int(a) + 3) for a in listed_password]
     password = "".join(encoded_password_list)
-
+    print(password)
     return password
 
 
